@@ -10,7 +10,7 @@ HardwareSerial Serial1(1);
 void setup()
 {
   Serial.begin(115200);
-  Serial1.begin(9600, SERIAL_8N1, 12, 15);   //17-TX 18-RX
+  Serial1.begin(9600, SERIAL_8N1, 12, 15);   //12-TX 15-RX
 }
 
 void loop()
