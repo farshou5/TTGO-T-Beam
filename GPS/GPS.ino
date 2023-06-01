@@ -5,11 +5,11 @@
 #include <TinyGPS++.h>                       
 
 TinyGPSPlus gps;                            
-HardwareSerial Serial1(1);                 
 
 void setup()
 {
   Serial.begin(115200);
+  HardwareSerial Serial1(1);
   Serial1.begin(9600, SERIAL_8N1, 12, 15);   //17-TX 18-RX
 }
 
@@ -47,4 +47,3 @@ static void smartDelay(unsigned long ms)
       gps.encode(Serial1.read());
   } while (millis() - start < ms);
 }
-
